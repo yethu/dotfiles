@@ -2,10 +2,14 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/nvim-compe'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ajmwagar/vim-deus'
 call plug#end()
 
 set relativenumber
 set completeopt=menuone,noselect
+colors deus
 
 if has("autocmd")
     filetype on
@@ -15,6 +19,8 @@ if has("autocmd")
 endif
 
 set autoindent
+
+let g:airline_theme='deus'
 
 let g:compe = {}
 let g:compe.enabled = v:true
@@ -89,6 +95,7 @@ require'lspconfig'.dockerls.setup{}
 require'lspconfig'.yamlls.setup{}
 require'lspconfig'.ccls.setup{}
 require'lspconfig'.tsserver.setup{}
+require'lspconfig'.terraformls.setup{}
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
