@@ -5,6 +5,9 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ajmwagar/vim-deus'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'stsewd/fzf-checkout.vim'
 call plug#end()
 
 set relativenumber
@@ -16,6 +19,7 @@ if has("autocmd")
 
     autocmd FileType html setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType typescript setlocal ts=2 sts=2 sw=2 expandtab
 endif
 
 set autoindent
@@ -93,7 +97,6 @@ lua << EOF
 require'lspconfig'.gopls.setup{}
 require'lspconfig'.dockerls.setup{}
 require'lspconfig'.yamlls.setup{}
-require'lspconfig'.ccls.setup{}
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.terraformls.setup{}
 
@@ -104,3 +107,7 @@ require'lspconfig'.html.setup{
     capabilities = capabilities,
 }
 EOF
+
+"-- fzf config
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let $FZF_DEFAULT_OPTS='--reverse'
