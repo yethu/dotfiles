@@ -1,5 +1,5 @@
 # dotfiles
-Personal dotfiles from OS X
+Personal dotfiles
 
 includes config for
 - alacritty
