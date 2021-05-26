@@ -1,4 +1,8 @@
 # dotfiles
 Personal dotfiles from OS X
 
-Configured towards JavaScript and Python development
+includes config for
+- alacritty
+- fish
+- neovim
+- tmux
