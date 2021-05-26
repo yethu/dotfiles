@@ -14,12 +14,17 @@ set relativenumber
 set completeopt=menuone,noselect
 colors deus
 
+"-- python3 config
+let g:python3_host_prog='/bin/python3'
+" python3 config --
+
 if has("autocmd")
     filetype on
 
     autocmd FileType html setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType typescript setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType cpp setlocal ts=4 sts=4 sw=4 expandtab
 endif
 
 set autoindent
@@ -99,6 +104,7 @@ require'lspconfig'.dockerls.setup{}
 require'lspconfig'.yamlls.setup{}
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.terraformls.setup{}
+require'lspconfig'.ccls.setup{}
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -110,4 +116,5 @@ EOF
 
 "-- fzf config
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let $FZF_DEFAULT_COMMAND='fd --type f'
 let $FZF_DEFAULT_OPTS='--reverse'
