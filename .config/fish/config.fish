@@ -20,6 +20,7 @@ eval /home/yethu/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 rvm default
 
 set -gx WASMTIME_HOME "$HOME/.wasmtime"
+set -gx GPG_TTY (tty)
 
 #--#
 # wasmtime
