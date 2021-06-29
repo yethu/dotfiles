@@ -6,3 +6,4 @@ includes config for
 - fish
 - neovim
 - tmux
+- vscode
