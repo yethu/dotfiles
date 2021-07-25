@@ -2,6 +2,7 @@ fish_add_path /home/yethu/thirdparty/flutter/bin
 fish_add_path /home/yethu/thirdparty/graalvm-ce-java11-21.1.0/bin
 fish_add_path /home/yethu/thirdparty/wabt-1.0.23/bin
 fish_add_path /home/yethu/thirdparty/apache-maven-3.8.1/bin
+fish_add_path /home/yethu/.local/share/coursier/bin
 fish_add_path /usr/local/go/bin
 fish_add_path /home/yethu/go/bin
 fish_add_path /home/yethu/.cargo/bin
