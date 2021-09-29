@@ -7,3 +7,4 @@ includes config for
 - neovim
 - tmux
 - vscode
+- taskwarrior
